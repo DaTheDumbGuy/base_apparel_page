@@ -1,0 +1,25 @@
+//Color
+$c_primary_a:hsl(0, 36%, 70%);
+$c_primary_b:hsl(0, 93%, 68%);
+$c_neutral:hsl(0, 6%, 24%);
+
+//Font weight
+$fw_light:300;
+$fw_normal:400;
+$fw_bold:600;
+
+//Gradients
+$gradient-direction_a: 135deg; 
+$start-color_a: hsl(0, 0%, 100%); 
+$end-color_a: hsl(0, 100%, 98%); 
+
+$gradient-direction_b: 135deg; 
+$start-color_b: hsl(0, 80%, 86%); 
+$end-color_b: hsl(0, 74%, 74%); 
+
+@mixin gradient_A {
+  background-image: linear-gradient($gradient-direction_a, $start-color_a, $end-color_a);
+}
+@mixin gradient_B {
+  background-image: linear-gradient($gradient-direction_b, $start-color_b, $end-color_b);
+}
