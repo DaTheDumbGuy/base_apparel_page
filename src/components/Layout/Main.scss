@@ -1,12 +1,18 @@
 @use '../../styles/scss/base/index' as b;
 .ba_main{
     text-align: center;
-    
+    max-width:375px;
+    margin:auto;
+
     .heroIMG_container{
-        display:inline-block;
-        width:100%;
-        background:red;
-        
+        display: block;
+        height: 250px;
+        background-image:url(../../assets/images/hero-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width:100%;     
+
         img{
             display:block;
             height: auto;
@@ -15,7 +21,7 @@
     }
     
     .ba_body{
-        margin-top:3em;
+        margin-top:2.5em;
         padding:0 15px;
         
         h1{
@@ -35,4 +41,72 @@
         }
     }
     
+}
+
+@media (min-width:768px) {
+    .ba_main{
+        display:flex;
+        flex-direction: row-reverse;
+        text-align: start;
+        max-width: unset;
+        padding-left:1rem;
+        margin-top:100px;
+        margin-right:20px;
+
+        .heroIMG_container{
+            position: absolute;
+            top: 0;
+            right:0;
+            width: 50%;
+            height: 100%;
+            background-image: url(../../assets/images/hero-desktop.jpg);
+            background-position: right center;
+        }
+
+        .ba_body{
+
+            h1{
+                line-height: 1.2em;
+                }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .ba_main{
+        padding:0 3rem;
+        margin: 100px 20px 0 0;
+
+        .ba_body{
+
+            h1{
+                font-size: 3em;
+            }
+        }
+    }
+}
+@media (min-width:1440px) {
+    .ba_main{
+        padding:0 5rem ;
+        margin-top:70px;
+
+        .heroIMG_container{
+            background-position: right top;
+
+        }
+        .ba_body{
+            padding-right:5rem;
+            h1{
+                margin-top:1.5rem;
+                padding-right:50px;
+                font-size: 3.5em;
+            }
+            .details{
+                margin-bottom:2.5rem;
+                .break{
+                    display: block;
+                }
+            }
+        }
+    }
 }
